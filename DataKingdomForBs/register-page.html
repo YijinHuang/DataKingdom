@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>login</title>
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/dataKingdom.css">
+</head>
+<body class="login-register-page">
+<img class="index-bg" src="img/Colorful-Paint.png">
+<div class="container">
+  <div class="row text-center">
+    <a href="index.html"><h1>Data Kingdom</h1></a>
+    <div class="panel panel-default col-md-6 col-md-offset-3 text-center">
+      <h2>注册</h2>
+      <form class="register-form text-left">
+        <label>用户名:</label>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+          <input type="text" class="form-control" name="username">
+        </div>
+
+        <!--<div class="alert alert-danger alert-dismissable">-->
+          <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+          <!--用户名已被注册-->
+        <!--</div>-->
+
+        <label>邮箱:</label>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+          <input type="email" class="form-control" name="email">
+        </div>
+
+        <label>密码:</label>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+          <input type="password" class="form-control" name="password_1">
+        </div>
+
+        <!--<div class="alert alert-danger alert-dismissable">-->
+          <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+          <!--密码过于简单-->
+        <!--</div>-->
+
+        <label>再次输入密码:</label>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+          <input type="password" class="form-control" name="password_2">
+        </div>
+
+        <!--<div class="alert alert-danger alert-dismissable">-->
+          <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+          <!--两次密码不同-->
+        <!--</div>-->
+
+        <label>验证码:</label>
+        <div class="row">
+        {{ register_form.captcha }}
+        </div>
+
+        <!--<div class="alert alert-danger alert-dismissable">-->
+          <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+          <!--验证码错误-->
+        <!--</div>-->
+
+        <button type="button" class="btn btn-primary btn-lg">注册</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="jQuery/jquery-3.2.1.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script>
+    $('.captcha').click(function(){
+        console.log('click');
+        $.getJSON("/captcha/refresh/", function(result){
+            $('.captcha').attr('src', result['image_url']);
+            $('#id_captcha_0').val(result['key'])
+        });
+    });
+
+    $('#ver-code-img').css("height",$('#ver-code-input').height());
+</script>
+</body>
+</html>
