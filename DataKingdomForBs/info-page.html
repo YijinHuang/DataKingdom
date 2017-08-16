@@ -17,14 +17,11 @@
     <li><a href="cpt-page.html">全部竞赛</a></li>
     <li><a href="login-page.html">登录</a></li>
     <li><a href="register-page.html">注册</a></li>
+    <!--<li>-->
+      <!--<a href="profile-page-info.html"><span class="glyphicon glyphicon-user"></span> username</a>-->
+    <!--</li>-->
+    <!--<li><a>注销</a></li>-->
   </ul>
-
-  <!--<ul class="nav navbar-nav nav-pills pull-right">-->
-  <!--<li>-->
-  <!--<a><span class="glyphicon glyphicon-user"></span> username</a>-->
-  <!--</li>-->
-  <!--<li><a>注销</a></li>-->
-  <!--</ul>-->
 </nav>
 
 <div class="container-fluid all-page-header">
@@ -34,13 +31,18 @@
     </div>
     <div class="col-md-6 page-header-txt text-center">
       <h1>病理切片识别AI挑战赛</h1>
+      <br>
+      <br>
+      <a>
+        <button type="button" class="btn btn-default">下载竞赛数据</button>
+      </a>
     </div>
   </div>
 </div>
 
-<div class="container-fluid info-content">
+<div class="container-fluid content">
   <div class="row">
-    <div class="col-md-3 col-md-offset-1">
+    <div class="col-md-3 col-md-offset-1 verticle-list">
       <ul class="nav nav-pills nav-stacked">
         <li><a href="#info-intro">赛事介绍</a></li>
         <li><a href="#info-rules">比赛规则</a></li>
@@ -49,8 +51,8 @@
       </ul>
     </div>
 
-    <div class="col-md-7">
-      <div class="pre-line info-txt">
+    <div class="col-md-7 col-md-offset-4">
+      <div class="pre-line content-txt">
         <h2 id="info-intro">赛事介绍</h2>
         <h3>赛题背景：</h3>
         <p>
@@ -188,6 +190,30 @@
 </footer>
 <script src="jQuery/jquery-3.2.1.min.js"></script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-<script src="js/all-page.js"></script>
+<script>
+    var listDiv = document.getElementsByClassName("verticle-list")[0];
+    var icon = document.getElementsByClassName("to-top")[0];
+
+    document.body.onscroll = function () {
+        if (document.body.scrollTop != 0)
+            icon.style.display = "block";
+        else
+            icon.style.display = "none";
+
+
+        if (document.body.scrollTop >= 400) {
+            listDiv.style.position = "fixed";
+            listDiv.style.top = "21px";
+        } else {
+            listDiv.style.position = "absolute"
+            listDiv.style.top = "";
+        }
+
+    }
+
+    icon.onclick = function () {
+        document.body.scrollTop = 0;
+    }
+</script>
 </body>
 </html>
