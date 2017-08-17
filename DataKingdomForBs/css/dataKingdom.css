@@ -38,21 +38,21 @@ body {
   cursor: default;
 }
 
-.navbar-default .navbar-brand:hover {
+.navbar-default > .navbar-brand:hover {
   color: #777;
 }
 
 .brand {
-  color: black;
   font-size: 1.4em;
+  color: black;
 }
 
-.navbar.navbar-default.page-nav ul a {
+.navbar.navbar-default.page-nav > ul a {
   font-size: 1.3em;
   font-weight: 500;
 }
 
-.navbar.navbar-default.index-nav ul:last-child {
+.navbar.navbar-default.index-nav > ul:last-child {
   padding-right: 30px;
 }
 
@@ -62,17 +62,17 @@ body {
   background-color: transparent;
 }
 
-.header .jumbotron {
+.header > .jumbotron {
   background: transparent;
 }
 
-.header .jumbotron h1 {
-  color: white;
+.header > .jumbotron > h1 {
   font-size: 80px;
   font-weight: 600;
+  color: white;
 }
 
-.header .jumbotron h2 {
+.header > .jumbotron > h2 {
   font-size: 100px;
   color: white;
   letter-spacing: 5px;
@@ -80,15 +80,11 @@ body {
 
 .header .btn.btn-default,
 .page-header-txt .btn.btn-default {
-  background-color: transparent;
-  border-radius: 999px;
-  color: white;
   width: 250px;
   height: 60px;
-}
-
-.header .btn.btn-default:focus {
-  outline: 0;
+  border-radius: 999px;
+  background-color: transparent;
+  color: white;
 }
 
 .header .btn.btn-default:hover {
@@ -102,7 +98,7 @@ body {
   color: white;
 }
 
-.index-info .row {
+.index-info > .row {
   display: flex;
   align-content: center;
   align-items: center;
@@ -113,12 +109,12 @@ body {
   width: 100%;
 }
 
-.index-info h2 {
+.index-info > .row h2 {
   font-size: 60px;
   letter-spacing: 6px;
 }
 
-.index-info p {
+.index-info > .row p {
   color: lightgray;
   font-size: 28px;
   font-weight: 300;
@@ -154,9 +150,9 @@ footer h2 {
 }
 
 footer a {
+  padding-left: 10px;
   font-size: 22px;
   color: white;
-  padding-left: 10px;
   cursor: pointer;
 }
 
@@ -177,55 +173,55 @@ footer a:hover {
 }
 
 .page-nav {
-  background-color: rgba(250, 250, 250, 0.8);
   border-top: transparent;
   border-radius: 0;
+  background-color: rgba(250, 250, 250, 0.8);
 }
 
 .all-page-header {
+  width: 100%;
   position: absolute;
   top: 0;
-  width: 100%;
-  background-color: white;
   border-bottom: solid 1px lightgray;
+  background-color: white;
 }
 
-.cpt-page .all-page-header img {
-  height: 400px;
+.cpt-page > .all-page-header img {
+  height: 300px;
 }
 
 .cpt-page .page-header-txt {
   position: relative;
-  top: 120px;
+  top: 80px;
 }
 
-.cpt-page .all-page-header h1 {
-  font-size: 80px;
+.cpt-page > .all-page-header h1 {
+  font-size: 70px;
 }
 
-.all-page-header .input-group {
+.page-header-txt > .input-group {
   width: 250px;
 }
 
-.cpt-page .competitions {
+.cpt-page > .competitions {
   position: relative;
-  top: 350px;
+  top: 260px;
 }
 
-.competitions .panel.panel-default {
+.competition-card .panel.panel-default {
   transition: 0.2s;
   border: transparent;
 }
 
-.competitions .panel.panel-default:hover {
+.competition-card .panel.panel-default:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.cpt-page .competitions .row {
+.cpt-page > .competitions > .row {
   margin-top: 20px;
 }
 
-.cpt-page .competitions img {
+.cpt-page .competition-card img {
   width: 350px;
   height: 200px;
   border-radius: 4px;
@@ -233,40 +229,36 @@ footer a:hover {
 }
 
 .cpt-txt {
+  height: 240px;
   position: relative;
   padding-left: 40px;
-  height: 240px;
 }
 
-.competitions h2 {
+.cpt-txt > h2 {
   font-size: 30px;
 }
 
-.competitions p {
+.cpt-txt p {
   font-size: 18px;
   color: lightgray;
 }
 
-.competitions .foot {
+.cpt-txt > .foot {
   width: 100%;
   position: absolute;
   bottom: 0;
 }
 
 .btn.btn-cpt {
-  color: #03a9f4;
   border-radius: 999px;
-  background-color: transparent;
   border-color: #03a9f4;
+  background-color: transparent;
+  color: #03a9f4;
 }
 
 .btn.btn-cpt:hover {
   background-color: #03a9f4;
   color: white;
-}
-
-.btn.btn-cpt:focus {
-  outline: 0;
 }
 
 .btn.btn-cpt:active {
@@ -275,15 +267,13 @@ footer a:hover {
   color: white;
 }
 
-.cpt-page footer,
-.info-about-page footer {
+.cpt-page > footer,
+.info-about-page > footer {
   position: relative;
   top: 500px;
 }
 
-.cpt-page footer .footer-bg,
-.info-about-page footer .footer-bg,
-.profile-page footer .footer-bg {
+.footer-bg{
   position: absolute;
   top: 230px;
   z-index: -1;
@@ -304,15 +294,15 @@ footer a:hover {
   color: white;
 }
 
-.login-register-page .container {
+.login-register-page > .container {
   position: relative;
   top: 50px;
 }
 
-.login-register-page h1 {
-  color: white;
+.login-register-page > .container h1 {
   font-size: 40px;
   font-weight: 600;
+  color: white;
 }
 
 .login-register-page .panel {
@@ -321,7 +311,7 @@ footer a:hover {
   border: transparent;
 }
 
-.login-register-page .panel h2 {
+.login-register-page .panel > h2 {
   margin-top: 40px;
 }
 
@@ -329,11 +319,11 @@ footer a:hover {
   margin: 30px 30px;
 }
 
-.login-form .input-group {
+.login-form > .input-group {
   margin-bottom: 20px;
 }
 
-.login-form button:not(.close) {
+.login-form > button:not(.close) {
   width: 100%;
   margin: 20px 0;
 }
@@ -342,98 +332,102 @@ footer a:hover {
   margin: 30px 60px;
 }
 
-.register-form .input-group {
+.register-form > .input-group {
   margin-bottom: 15px;
 }
 
-.register-form button:not(.close) {
-  width: 80%;
-  margin: 30px 10%;
+.register-form > button:not(.close) {
+width: 80%;
+margin: 30px 10%;
 }
 
-/*info page css*/
+/*info and about page css*/
 
 .info-about-page {
-  background-color: #f2f2f2;
+background-color: #f2f2f2;
 }
 
-.info-about-page .all-page-header h1 {
-  font-size: 55px;
+.info-about-page > .all-page-header img {
+width: 100%;
+height: 300px;
+}
+
+.info-about-page > .all-page-header .page-header-txt {
+  position: relative;
+  top: 80px;
+}
+
+.page-header-txt > h1 {
+font-size: 55px;
 }
 
 .page-header-txt .btn.btn-default {
-  font-size: 18px;
-  border-color: #03a9f4;
-  color: #03a9f4;
+border-color: #03a9f4;
+font-size: 18px;
+color: #03a9f4;
+}
+
+.info-about-page .page-header-txt .btn.btn-default{
+width: 200px;
+height: 50px;
 }
 
 .page-header-txt .btn.btn-default:hover {
-  background-color: #03a9f4;
-  color: white;
+background-color: #03a9f4;
+color: white;
 }
 
-.info-about-page .nav.nav-stacked,
-.profile-page .nav.nav-stacked {
-  border: black;
-  background: white;
-  border-radius: 5px;
+.verticle-list > .nav.nav-stacked{
+border: black;
+border-radius: 5px;
+background: white;
 }
 
-.info-about-page .nav.nav-stacked {
-  font-size: 25px;
+.verticle-list > .nav.nav-stacked {
+font-size: 25px;
 }
 
-.info-about-page .nav.nav-stacked > li > a,
-.profile-page .nav.nav-stacked > li > a {
-  padding: 20px 20px;
+.nav.nav-stacked > li > a{
+padding: 20px 20px;
 }
 
 .content {
-  position: relative;
-  top: 350px;
+position: relative;
+top: 280px;
 }
 
 .verticle-list {
-  position: absolute;
+position: absolute;
 }
 
 .pre-line p {
-  white-space: pre-line;
+white-space: pre-line;
 }
 
 .content-txt {
-  padding: 10px 30px 30px 30px;
-  border-radius: 5px;
-  background-color: white;
+padding: 10px 30px 30px 30px;
+border-radius: 5px;
+background-color: white;
 }
 
 .info-about-page .content-txt {
-  font-size: 18px;
+font-size: 18px;
 }
 
 .info-about-page .content-txt h2 {
-  font-size: 35px;
-  color: #03a9f4;
-}
-
-.info-about-page .all-page-header img {
-  width: 100%;
-}
-
-.info-about-page .page-header-txt {
-  position: relative;
-  top: 130px;
+font-size: 35px;
+color: #03a9f4;
 }
 
 /*other css*/
 
 .to-top {
   display: none;
+  height: 70px;
+  width: 70px;
   position: fixed;
   bottom: 70px;
   right: 30px;
-  height: 70px;
-  width: 70px;
   font-size: 70px;
   color: lightgray;
   z-index: 999;
@@ -451,11 +445,11 @@ footer a:hover {
   background-color: #f2f2f2;
 }
 
-.profile-page .content {
+.profile-page > .content {
   top: 80px;
 }
 
-.profile-page .nav.nav-stacked {
+.profile-page .verticle-list > .nav.nav-stacked {
   font-size: 20px;
 }
 
@@ -495,20 +489,28 @@ footer a:hover {
 .profile-page-cpt .competitions img {
   width: 263px;
   height: 150px;
-  border-radius: 4px;
   margin: 20px 0 20px 20px;
+  border-radius: 4px;
 }
 
 .profile-page-cpt .cpt-txt {
   height: 160px;
-  margin-top: 20px;
   padding-left: 20px;
+  margin-top: 20px;
 }
 
-.profile-page-cpt .competitions h2 {
+.profile-page-cpt .cpt-txt h2 {
   font-size: 25px;
 }
 
-.profile-page-cpt .competitions .foot {
+.profile-page-cpt .cpt-txt .foot {
   bottom: 25px;
+}
+
+.edit-time {
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+  color: lightgray;
+  font-size: 12px;
 }
