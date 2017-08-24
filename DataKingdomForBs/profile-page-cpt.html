@@ -1,169 +1,180 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, intial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
   <title>Profile</title>
   <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/dataKingdom.css">
 </head>
+
 <body class="profile-page profile-page-cpt">
-<nav class="navbar navbar-default page-nav" role="navigation">
-  <ul class="nav navbar-nav nav-pills navbar-brand"><span class="brand">Data</span> Kingdom</ul>
-
-  <ul class="nav navbar-nav nav-pills pull-right">
-    <li><a href="index.html">主页</a></li>
-    <li><a href="cpt-page.html">全部竞赛</a></li>
-    <li><a href="login-page.html">登录</a></li>
-    <li><a href="register-page.html">注册</a></li>
-    <!--<li>-->
-    <!--<a href="profile-page-info.html"><span class="glyphicon glyphicon-user"></span> username</a>-->
-    <!--</li>-->
-    <!--<li><a>注销</a></li>-->
-  </ul>
-</nav>
-
-<div class="container-fluid content">
-  <div class="row">
-    <div class="col-md-2 col-md-offset-2 verticle-list">
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="profile-page-info.html">个人信息</a></li>
-        <li><a href="profile-page-change.html">账号设置</a></li>
-        <li><a href="#">个人比赛</a></li>
-        <li class="active"><a href="#">团体比赛</a></li>
+  <nav class="navbar navbar-default page-nav" role="navigation">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".menu">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      <div class="nav navbar-nav nav-pills navbar-brand"><span class="brand">Data</span> Kingdom</div>
+    </div>
+    <div class="collapse navbar-collapse menu">
+      <ul class="nav navbar-nav nav-pills pull-right">
+        <li><a href="index.html">主页</a></li>
+        <li><a href="cpt-page.html">全部竞赛</a></li>
+        <li><a href="login-page.html">登录</a></li>
+        <li><a href="register-page.html">注册</a></li>
+        <!--<li>-->
+        <!--<a href="profile-page-info.html"><span class="glyphicon glyphicon-user"></span> username</a>-->
+        <!--</li>-->
+        <!--<li><a>注销</a></li>-->
       </ul>
     </div>
+  </nav>
 
-    <div class="col-md-6 col-md-offset-4">
-      <div class="container-fluid competitions">
-        <div class="row competition-card">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="row">
-                <div class="col-md-5 pull-left">
-                  <img src="img/race_3.jpg">
-                </div>
-                <div class="col-md-7 cpt-txt">
-                  <h2>病理切片识别AI挑战赛</h2>
-                  <div class="foot row">
-                    <div class="col-md-2">
-                      <a href="info-page.html">
-                        <button type="button" class="btn btn-cpt">查看详情</button>
-                      </a>
-                    </div>
-                    <div class="col-md-2 col-md-offset-1">
-                      <a href="#">
-                        <button type="button" class="btn btn-cpt">上传数据</button>
-                      </a>
-                    </div>
-                    <div class="col-md-5 edit-time">
-                      <!--未上传-->
-                      上次上传时间为:2017/8/17
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row competition-card">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="row">
-                <div class="col-md-5 pull-left">
-                  <img src="img/race_4.jpg">
-                </div>
-                <div class="col-md-7 cpt-txt">
-                  <h2>智能投顾技术挑战赛</h2>
-                  <div class="foot row">
-                    <div class="col-md-2">
-                      <a href="info-page.html">
-                        <button type="button" class="btn btn-cpt">查看详情</button>
-                      </a>
-                    </div>
-                    <div class="col-md-2 col-md-offset-1">
-                      <a href="#">
-                        <button type="button" class="btn btn-cpt">上传数据</button>
-                      </a>
-                    </div>
-                    <div class="col-md-5 edit-time">
-                      未上传
-                      <!--上次上传时间为:2017/8/17-->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row competition-card">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="row">
-                <div class="col-md-5 pull-left">
-                  <img src="img/zhxy.png">
-                </div>
-                <div class="col-md-7 cpt-txt">
-                  <h2>智慧校园全球大学生创意应用大赛</h2>
-                  <div class="foot row">
-                    <div class="col-md-2">
-                      <a href="info-page.html">
-                        <button type="button" class="btn btn-cpt">查看详情</button>
-                      </a>
-                    </div>
-                    <div class="col-md-2 col-md-offset-1">
-                      <a href="#">
-                        <button type="button" class="btn btn-cpt">上传数据</button>
-                      </a>
-                    </div>
-                    <div class="col-md-5 edit-time">
-                      <!--未上传-->
-                      上次上传时间为:2017/8/17
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="to-top img-circle hidden-xs">
-  <span class="glyphicon glyphicon-upload"></span>
-</div>
-
-<footer>
-  <div class="container text-center">
-    <br>
-    <h2>Data Kingdom</h2>
-    <br>
-    <br>
+  <div class="container-fluid content">
     <div class="row">
-      <div class="col-md-2 col-md-offset-5">
-        <img class="QRcode" src="img/QRcode.png">
+      <div class="hidden-xs hidden-sm col-md-3 col-md-offset-1 verticle-list">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="profile-page-info.html">个人信息</a></li>
+          <li><a href="profile-page-change.html">账号设置</a></li>
+          <li><a href="#">个人比赛</a></li>
+          <li class="active"><a href="#">团体比赛</a></li>
+        </ul>
+      </div>
+
+      <div class="visible-xs visible-sm col-xs-12 mobile-list">
+        <div class="nav nav-pills">
+          <ul class="nav nav-pills text-center">
+            <li><a href="profile-page-info.html">个人信息</a></li>
+            <li><a href="profile-page-change.html">账号设置</a></li>
+            <li><a href="#">个人比赛</a></li>
+            <li class="active"><a href="#">团体比赛</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-6 col-md-offset-4">
+        <div class="container-fluid competitions">
+          <div class="row competition-card">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="row">
+                  <div class="col-md-5 pull-left">
+                    <img src="img/race_3.jpg">
+                  </div>
+                  <div class="col-md-7 cpt-txt">
+                    <h2 onclick="window.location = 'info-page.html'">病理切片识别AI挑战赛</h2>
+                    <div class="foot">
+                      <form class="row cpt-form" method="post" enctype="multipart/form-data" action="{% url 'user:upload' %}">
+                        <a href="info-page.html" class="col-xs-5 col-md-3">
+                            <button type="button" class="btn btn-cpt">下载试题</button>
+                          </a>
+                        <div class="col-xs-5 col-md-3">
+                          <button type="submit" class="btn btn-cpt">修改数据</button>
+                        </div>
+                        <input class="col-xs-12 col-md-12" type="file" name="file">
+                        <input type="hidden" name="competition_id" value="{{ competition.competition.id }}">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row competition-card">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="row">
+                  <div class="col-md-5 pull-left">
+                    <img src="img/race_4.jpg">
+                  </div>
+                  <div class="col-md-7 cpt-txt">
+                    <h2 onclick="window.location = 'info-page.html'">智能投顾技术挑战赛</h2>
+                    <div class="foot">
+                      <form class="row cpt-form" method="post" enctype="multipart/form-data" action="{% url 'user:upload' %}">
+                        <a href="info-page.html" class="col-xs-5 col-md-3">
+                            <button type="button" class="btn btn-cpt">下载试题</button>
+                          </a>
+                        <div class="col-xs-5 col-md-3">
+                          <button type="submit" class="btn btn-cpt">修改数据</button>
+                        </div>
+                        <input class="col-xs-12 col-md-12" type="file" name="file">
+                        <input type="hidden" name="competition_id" value="{{ competition.competition.id }}">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row competition-card">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="row">
+                  <div class="col-md-5 pull-left">
+                    <img src="img/zhxy.png">
+                  </div>
+                  <div class="col-md-7 cpt-txt">
+                    <h2 onclick="window.location = 'info-page.html'">智慧校园全球大学生创意应用大赛</h2>
+                    <div class="foot">
+                      <form class="row cpt-form" method="post" enctype="multipart/form-data" action="{% url 'user:upload' %}">
+                        <a href="info-page.html" class="col-xs-5 col-md-3">
+                            <button type="button" class="btn btn-cpt">下载试题</button>
+                          </a>
+                        <div class="col-xs-5 col-md-3">
+                          <button type="submit" class="btn btn-cpt">修改数据</button>
+                        </div>
+                        <input class="col-xs-12 col-md-12" type="file" name="file">
+                        <input type="hidden" name="competition_id" value="{{ competition.competition.id }}">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <ul class="list-inline">
-      <li><a href="about-page.html#info-about">关于数据王国</a></li>
-      <li><a href="about-page.html#info-privacy">隐私协议</a></li>
-      <li><a href="about-page.html#info-rules">服务规则</a></li>
-      <li><a href="about-page.html#info-contact">联系我们</a></li>
-    </ul>
   </div>
-  <img class="footer-bg" src="img/colorful-bottom.png">
-</footer>
 
-<script src="jQuery/jquery-3.2.1.min.js"></script>
-<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-<script src="js/all-page.js"></script>
+  <div class="to-top img-circle hidden-xs">
+    <span class="glyphicon glyphicon-upload"></span>
+  </div>
+
+  <footer>
+    <div class="container text-center">
+      <br>
+      <h2>Data Kingdom</h2>
+      <span class="hidden-sm hidden-xs"><br></span>
+      <br>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5">
+          <img class="QRcode" src="img/QRcode.png">
+        </div>
+      </div>
+      <span class="hidden-sm hidden-xs"><br></span>
+      <br>
+      <br>
+      <ul class="list-inline">
+        <li><a href="about-page.html#info-about">关于数据王国</a></li>
+        <li><a href="about-page.html#info-privacy">隐私协议</a></li>
+        <li><a href="about-page.html#info-rules">服务规则</a></li>
+        <li><a href="about-page.html#info-contact">联系我们</a></li>
+      </ul>
+    </div>
+    <img class="footer-bg" src="img/colorful-bottom.png">
+  </footer>
+
+  <script src="jQuery/jquery-3.2.1.min.js"></script>
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+  <script src="js/all-page.js"></script>
 </body>
+
 </html>

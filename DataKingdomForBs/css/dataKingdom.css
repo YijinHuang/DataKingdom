@@ -67,14 +67,14 @@ body {
 }
 
 .header > .jumbotron > h1 {
-  font-size: 80px;
   font-weight: 600;
+  font-size: 80px;
   color: white;
 }
 
 .header > .jumbotron > h2 {
-  font-size: 100px;
   color: white;
+  font-size: 100px;
   letter-spacing: 5px;
 }
 
@@ -96,13 +96,15 @@ body {
   position: relative;
   top: 450px;
   color: white;
+  margin-bottom: 500px;
 }
 
-.index-info > .row {
+.index-info > .row{
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: center;
+  margin-bottom: 200px
 }
 
 .index-info img {
@@ -119,22 +121,6 @@ body {
   font-size: 28px;
   font-weight: 300;
   letter-spacing: 2px;
-}
-
-.index-info > div:nth-child(2) {
-  position: relative;
-  top: 200px;
-}
-
-.index-info > div:last-child {
-  position: relative;
-  top: 400px;
-}
-
-footer {
-  position: relative;
-  top: 1100px;
-  z-index: -1;
 }
 
 footer img {
@@ -268,8 +254,8 @@ footer a:hover {
 }
 
 .cpt-page > footer,
-.info-about-page > footer {
-  position: relative;
+.info-about-page > footer{
+  position: relative !important;
   top: 500px;
 }
 
@@ -319,7 +305,7 @@ footer a:hover {
   margin: 30px 30px;
 }
 
-.login-form > .input-group {
+.login-form .input-group {
   margin-bottom: 20px;
 }
 
@@ -419,6 +405,79 @@ font-size: 35px;
 color: #03a9f4;
 }
 
+.all-page-header > .row > .col-md-2.pull-right{
+  padding-right: 0;
+}
+
+.list-toggle {
+  position: fixed;
+  z-index: 999;
+  top: 100px;
+  left: 20px;
+}
+
+.mobile-list {
+  margin-bottom: 20px;
+  z-index: 999;
+}
+
+.mobile-list li{
+  width: 24%;
+}
+
+.mobile-list li > a {
+  padding: 10px 5px;
+  font-size: 10px;
+}
+
+/*confirm window of info page css*/
+
+.confirm {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.winBg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 999;
+}
+
+.win {
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  z-index: 9999;
+}
+
+.win-panel{
+  box-shadow: 0px 0px 40px -10px black;
+}
+
+.win-panel h2{
+  padding: 20px 0;
+}
+
+.win-panel p{
+  color: lightgray;
+}
+
+.win-panel button{
+  margin: 20px 20px;
+}
+
+.btn.btn-default.joined {
+  color: lightgray;
+  border-color: lightgray;
+  cursor: default;
+}
+
 /*other css*/
 
 .to-top {
@@ -465,9 +524,6 @@ color: #03a9f4;
 .profile-page .content-txt textarea {
   width: 70%;
   margin-bottom: 30px;
-}
-
-.profile-page .content-txt textarea {
   max-width: 70%;
 }
 
@@ -480,9 +536,15 @@ color: #03a9f4;
   font-size: 18px;
 }
 
-.profile-page footer {
+.profile-page > footer {
+  position: relative;
   top: 300px;
 }
+
+.profile-page .alert-danger {
+  width: 70%;
+}
+
 
 /*profile page of competitions css*/
 
@@ -494,23 +556,261 @@ color: #03a9f4;
 }
 
 .profile-page-cpt .cpt-txt {
-  height: 160px;
-  padding-left: 20px;
-  margin-top: 20px;
+  height: 170px;
+  padding-left: 15px;
 }
 
 .profile-page-cpt .cpt-txt h2 {
+  padding-right: 10px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .profile-page-cpt .cpt-txt .foot {
-  bottom: 25px;
+  bottom: 0px;
 }
 
-.edit-time {
-  position: absolute;
-  bottom: 0;
-  right: 35px;
-  color: lightgray;
-  font-size: 12px;
+.cpt-form > .btn.btn-cpt{
+  margin-right: 20px;
+}
+
+.cpt-form input[type="file"]{
+  margin-top: 20px;
+  max-width: 80%;
+}
+
+/*Data Kingdom for mobile css*/
+
+@media (max-width: 991px) {
+  .navbar-brand {
+    height: auto;
+    padding: 6px 30px;
+  }
+
+  .nav.navbar-nav {
+    float: left !important;
+  }
+
+  .navbar {
+    margin-bottom: 0 !important;
+  }
+
+  .header {
+    top: 0;
+  }
+
+  .header > .jumbotron > h1 {
+    font-size: 50px;
+  }
+
+  .header > .jumbotron > h2 {
+    font-size: 60px;
+  }
+
+  .header .btn.btn-default,
+  .page-header-txt .btn.btn-default {
+    width: 150px !important;
+    height: 42px !important;
+  }
+
+  .index-info {
+    top: 30px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .index-info > .row {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .index-info > .row h2{
+    font-size: 40px;
+  }
+
+  .index-info > .row p{
+    font-size: 20px;
+  }
+
+  footer h2 {
+    font-size: 40px;
+  }
+
+  footer a {
+    width: 24%;
+    font-size: 12px;
+  }
+
+  .cpt-page .all-page-header {
+    position: static;
+  }
+
+  .cpt-page > .all-page-header .page-header-txt {
+    top: 0;
+  }
+
+  .cpt-page .page-header-txt .btn.btn-default,
+  .page-header-txt > .input-group {
+    margin-bottom: 20px;
+  }
+
+  .cpt-page > .all-page-header{
+    margin-bottom: 20px;
+  }
+
+  .cpt-page > .all-page-header h1 {
+    font-size: 40px;
+  }
+
+  .cpt-page > .competitions {
+    position: static;
+  }
+
+  .cpt-page > .competitions > .row {
+    margin-top: 0px;
+  }
+
+  .cpt-page .competition-card img {
+    width: 122px;
+    height: 70px;
+    margin: 10px 0 10px 10px;
+  }
+
+  .cpt-txt {
+    margin-top: 10px;
+    height: 70px;
+    padding-left: 10px;
+  }
+
+  .cpt-txt > h2 {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+
+  .cpt-txt p {
+    font-size: 12px;
+  }
+
+  .btn.btn-cpt {
+    font-size: 12px;
+    height: 28px;
+  }
+
+  .cpt-txt > .foot {
+    bottom: 0px;
+    padding-right: 10px;
+  }
+
+  .login-form,
+  .register-form {
+    margin: 10px 10px;
+  }
+
+  .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn{
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+  }
+
+  form .btn-lg, .btn-group-lg > .btn{
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+  }
+
+  .info-about-page .all-page-header {
+    position: static;
+  }
+
+  .info-about-page > .all-page-header .page-header-txt {
+    top: 0;
+  }
+
+  .page-header-txt > h1 {
+    top: 0;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    top: 40px;
+  }
+
+  .info-about-page .content-txt h2 {
+    font-size: 20px;
+    padding-right: 10px;
+  }
+
+  .info-about-page .content-txt h3 {
+    font-size: 16px;
+  }
+
+  .info-about-page .content-txt p {
+    font-size: 14px;
+  }
+
+  .footer-bg {
+    top: auto;
+    bottom: 0;
+  }
+
+  .cpt-page > footer,
+  .info-about-page > footer {
+    top: 100px;
+  }
+
+  .content-txt {
+    padding: 10px 15px 15px 15px;
+  }
+
+  .info-about-page .page-header-txt .btn.btn-default {
+    margin-bottom: 20px;
+  }
+
+  .visible-xs.visible-br,
+  .visible-sm.visible-br {
+    display: inline !important;
+  }
+
+  .profile-page .content-txt .input-group,
+  .profile-page .content-txt textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-page .alert-danger {
+    width: 100%;
+  }
+
+  .profile-page > .content {
+    top: 20px;
+  }
+
+  .profile-page > footer {
+    top: 100px;
+  }
+
+  .profile-page-cpt .competition-card img {
+    width: 122px;
+    height: 70px;
+    margin: 10px 0 10px 10px;
+  }
+
+  .profile-page-cpt .cpt-txt {
+    height: 150px;
+  }
+
+  .profile-page-cpt .cpt-txt h2 {
+    font-size: 16px;
+  }
+
+  .profile-page-cpt .cpt-txt .foot {
+    margin: 0 0 10px 10px;
+  }
+
+  .cpt-form input[type="file"] {
+    margin-top: 10px;
+  }
 }
